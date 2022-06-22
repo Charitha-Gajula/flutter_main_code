@@ -1,0 +1,26 @@
+import 'package:flutter/material.dart';
+// main function is the beginning point for all flutter apps
+void main() {
+  runApp(
+MyApp()
+  );
+}
+class MyApp extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+    home: Scaffold(
+    backgroundColor: Colors.lime,
+body: Container(
+  color: Colors.lightBlueAccent,
+),
+),
+);
+  }
+}
+
+
+
+
+the result here is that even if its only container's color thats blue the whole screen will be blue beacuse it has no children
