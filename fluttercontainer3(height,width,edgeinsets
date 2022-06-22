@@ -1,0 +1,90 @@
+import 'package:flutter/material.dart';
+// main function is the beginning point for all flutter apps
+void main() {
+  runApp(
+MyApp()
+  );
+}
+class MyApp extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+    home: Scaffold(
+    backgroundColor: Colors.lime,
+body: SafeArea(
+  child:   Container(
+    height: 20.00,
+    width: 135.00,
+    margin: EdgeInsets.all(300) ,
+    color: Colors.lightBlueAccent,
+    child: Text('lalalalalalmaldjifjefn'),
+
+  
+  ),
+),
+),
+);
+  }
+}
+the above is when everything  is 300 now onky top and bottom we gotta use edgeinsets.symmetric
+import 'package:flutter/material.dart';
+// main function is the beginning point for all flutter apps
+void main() {
+  runApp(
+MyApp()
+  );
+}
+class MyApp extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+    home: Scaffold(
+    backgroundColor: Colors.lime,
+body: SafeArea(
+  child:   Container(
+    height: 20.00,
+    width: 135.00,
+    margin: EdgeInsets.symmetric(vertical:50.00,horizontal:440.00) ,
+    color: Colors.pink,
+    child: Text('You are dumb,ngl'),
+
+  
+  ),
+),
+),
+);
+  }
+}
+like this one
+and now for example we want edgeinsets for everything differently we gotta use EdgeInsets.fromLRTB
+import 'package:flutter/material.dart';
+// main function is the beginning point for all flutter apps
+void main() {
+  runApp(
+MyApp()
+  );
+}
+class MyApp extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+    home: Scaffold(
+    backgroundColor: Colors.lime,
+body: SafeArea(
+  child:   Container(
+    height: 20.00,
+    width: 135.00,
+    margin: EdgeInsets.fromLTRB(25, 10, 10, 25),
+    color: Colors.pink,
+    child: Text('You are dumb,ngl'),
+
+  
+  ),
+),
+),
+);
+  }
+}
