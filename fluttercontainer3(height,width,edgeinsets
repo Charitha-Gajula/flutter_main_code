@@ -88,3 +88,34 @@ body: SafeArea(
 );
   }
 }
+
+last one is when we want for only 1 thing EdgeInsets.only(left:10.00)
+import 'package:flutter/material.dart';
+// main function is the beginning point for all flutter apps
+void main() {
+  runApp(
+MyApp()
+  );
+}
+class MyApp extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+    home: Scaffold(
+    backgroundColor: Colors.lime,
+body: SafeArea(
+  child:   Container(
+    height: 20.00,
+    width: 135.00,
+    margin: EdgeInsets.only(left: 40.00),
+    color: Colors.pink,
+    child: Text('You are dumb,ngl'),
+
+  
+  ),
+),
+),
+);
+  }
+}
