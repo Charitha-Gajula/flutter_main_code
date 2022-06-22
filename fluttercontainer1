@@ -1,0 +1,53 @@
+import 'package:flutter/material.dart';
+// main function is the beginning point for all flutter apps
+void main() {
+  runApp(
+MyApp()
+  );
+}
+class MyApp extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+    home: Scaffold(
+    backgroundColor: Colors.lime,
+body: Container(
+  color: Colors.lightBlueAccent,
+  child: Text('lalalalalalmaldjifjefn'),
+),
+),
+);
+  }
+}
+
+
+
+
+this is when the text becomes the file so that small text will basically occupy the blue place and now to organize it we shall use container with wrap widget opotion
+and give the widget as safe area
+import 'package:flutter/material.dart';
+// main function is the beginning point for all flutter apps
+void main() {
+  runApp(
+MyApp()
+  );
+}
+class MyApp extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+    home: Scaffold(
+    backgroundColor: Colors.lime,
+body: SafeArea(
+  child:   Container(
+    color: Colors.lightBlueAccent,
+    child: Text('lalalalalalmaldjifjefn'),
+  
+  ),
+),
+),
+);
+  }
+}
