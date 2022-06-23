@@ -1,0 +1,115 @@
+import 'package:flutter/material.dart';
+// main function is the beginning point for all flutter apps
+void main() {
+  runApp(
+      MyApp()
+  );
+}
+class MyApp extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.transparent,
+        body: SafeArea(
+            child:   Column(
+
+                children:<Widget> [
+                Container(
+                height: 300,
+                width: double.infinity,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      image: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCoMbmCXe2hPdWPsDJtDaPD-B2w79PreXd0A&usqp=CAU"),
+                      fit: BoxFit.cover),
+                ),
+                ),
+                  Text (
+                    'Oeschenin Lake Campground',
+                    style: TextStyle(
+                        fontSize: 40.00,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                    ),
+
+                  ),
+                  Text (
+                    'Kandersteg, Switzerland               ⭐41',
+                    style: TextStyle(
+                      fontSize: 30.00,
+                      color: Colors.grey,
+                      fontWeight: FontWeight.normal,
+                    ),
+
+                  ),
+                  Container(
+                    height: 150.00,
+                    margin: EdgeInsets.fromLTRB(20, 5, 20, 5),
+                    padding: EdgeInsets.all(25.00),
+                    color: Colors.white,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+                      children:<Widget> [
+                         Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Icon(
+                                Icons.call,
+                              size:70,
+                              color: Colors.blue,
+
+                            ),
+                            Text("Call"), // <-- Text
+                          ],
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Icon(
+                              Icons.navigation,
+                              size:70,
+                              color: Colors.blue,
+
+                            ),
+                            Text("Route"), // <-- Text
+                          ],
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Icon(
+                              Icons.share,
+                              size:70,
+                              color: Colors.blue,
+
+                            ),
+                            Text("Share"), // <-- Text
+                          ],
+                        ),
+
+                      ],
+                    ),
+                  ),
+                  Text (
+                    ' Lake Oeschinen lies at the foot of the Blüemlisalp.'
+                        'Situated    1,578 meter above sea level, it is one of the larger Alpine Lakes. A gondola train leads from Kandersteg to a location near the lake. A half-hour walk across pastures and through pine forest takes you to the lake.',
+                    style: TextStyle(
+                      fontSize:20.00,
+                      color: Colors.black87,
+                      fontWeight: FontWeight.normal,
+                    ),
+
+                  ),
+
+
+                ]
+            )
+        ),
+      ),
+    );
+  }
+}
+
+
