@@ -1,0 +1,100 @@
+import 'dart:math';
+
+import 'package:flutter/material.dart';
+// main function is the beginning point for all flutter apps
+void main() {
+  runApp(
+      MyApp()
+  );
+}
+class MyApp extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+            child:   Column(
+                children:<Widget> [
+                  CircleAvatar(
+                    radius: 100.00,
+                    backgroundImage: NetworkImage('https://image.shutterstock.com/shutterstock/photos/577283365/display_1500/stock-vector-beautiful-brunette-girl-with-magnificent-brown-dark-chocolate-color-curly-hair-portrait-isolated-on-577283365.jpg'),
+                  ),
+                  Text (
+                      'Charitha:))',
+                    style: TextStyle(
+                      fontFamily: 'Pacifico',
+                      fontSize: 50.00,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold
+                    )
+
+                  ),
+                  Text (
+                      'An amazing person',
+                      style: TextStyle(
+                          fontSize: 30.00,
+                          color: Colors.white,
+                          fontWeight: FontWeight.normal
+                      ),
+
+                  ),
+               Container(
+                 height: 150.00,
+                 margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                 padding: EdgeInsets.all(5.00),
+                 color: Colors.white,
+                 child: Row(
+                   children:<Widget> [
+                     Icon(
+                         Icons.call,
+                             size:100,
+                       color: Colors.teal,
+                     ),
+                     Text (
+                         '7981011275',
+                         style: TextStyle(
+                             fontSize: 50.00,
+                             color: Colors.teal,
+                             fontWeight: FontWeight.normal
+                         )
+
+                     ),
+
+                   ],
+                 ),
+               ),
+                  Container(
+                    height: 150.00,
+                    margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    padding: EdgeInsets.all(5.00),
+                    color: Colors.white,
+                    child: Row(
+                      children:<Widget> [
+                        Icon(
+                          Icons.mail,
+                          size:100,
+                          color: Colors.teal,
+                        ),
+                        Text (
+                            'charithaagajula@gmail.com',
+                            style: TextStyle(
+                                fontSize: 25.00,
+                                color: Colors.teal,
+                                fontWeight: FontWeight.normal
+                            )
+
+                        ),
+
+                      ],
+                    ),
+                  )
+
+                ]
+            )
+        ),
+      ),
+    );
+  }
+}
