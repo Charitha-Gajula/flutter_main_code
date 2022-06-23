@@ -1,3 +1,6 @@
+Adding a widget tree instead of whole code
+
+
 import 'package:flutter/material.dart';
 // main function is the beginning point for all flutter apps
 void main() {
