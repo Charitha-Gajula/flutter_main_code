@@ -1,0 +1,839 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MaterialApp(
+    title: 'Navigation Basics',
+    home: FirstRoute(),
+  ));
+}
+class FirstRoute extends StatelessWidget {
+  const FirstRoute({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+
+        body: SafeArea(
+            child:   SingleChildScrollView(
+              child: Column(
+
+
+                  children:<Widget> [
+                    Container(
+                      height: 100.00,
+                      width: double.infinity,
+                      margin: EdgeInsets.fromLTRB(20, 5, 20, 5),
+                      padding: EdgeInsets.all(5.00),
+                      color: Colors.white10,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children:<Widget> [
+                          Container(
+                            height: 70,
+                            width: 70,
+                            decoration: BoxDecoration(
+                              color: Colors.lightBlueAccent[100],
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(12.0),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            height: 70,
+                            width: 200,
+                            decoration: BoxDecoration(
+                              color: Colors.grey,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(12.0),
+                              ),
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+                              children:const <Widget> [
+                                Icon(
+                                  Icons.search,
+                                  size:70,
+                                  color: Colors.black45,
+
+                                ),
+                                Text ('Search here',
+                                  style: TextStyle(
+                                    fontSize: 20.00,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.normal,
+                                  ),
+
+                                ),
+
+                              ],
+                            ),
+
+
+                          ),
+                          Container(
+                            height: 70,
+                            width: 70,
+                            decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.all(Radius.circular(20)
+                              ),
+                              image: DecorationImage(
+                                  image: NetworkImage("https://images.pexels.com/photos/1857300/pexels-photo-1857300.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+                                  fit: BoxFit.cover),
+                            ),
+
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: 300.00,
+                      width: double.infinity,
+                      margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                      padding: EdgeInsets.all(5.00),
+                      color: Colors.white10,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+                        children:<Widget> [
+                          Container(
+                            margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                            padding: EdgeInsets.all(5.00),
+                            height: 300,
+                            width: 200,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+
+                              children:<Widget> [
+                                Icon(
+                                  Icons.wallet,
+                                  size:40,
+                                  color: Colors.white,
+
+                                ),
+                                Text (
+                                  'Main balance',
+                                  style: TextStyle(
+                                    fontSize: 30.00,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.normal,
+                                  ),
+
+                                ),
+                                Text ('RS 3000',
+                                  style: TextStyle(
+                                    fontSize: 40.00,
+                                    color: Colors.blueGrey,
+                                    fontWeight: FontWeight.normal,
+                                  ),
+
+                                ),
+                                Icon(
+                                  Icons.pin_end_sharp,
+                                  size:40,
+                                  color: Colors.white,
+
+                                ),
+
+
+                              ],
+                            ),
+
+                            decoration: BoxDecoration(
+                              color: Colors.blueAccent[700],
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(12.0),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                            padding: EdgeInsets.all(5.00),
+                            height: 300,
+                            width: 200,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+
+                              children:<Widget> [
+                                Icon(
+                                  Icons.wallet,
+                                  size:40,
+                                  color: Colors.brown,
+
+                                ),
+                                Text (
+                                  'Main card',
+                                  style: TextStyle(
+                                    fontSize: 30.00,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.normal,
+                                  ),
+
+                                ),
+                                Text ('**5678',
+                                  style: TextStyle(
+                                    fontSize: 40.00,
+                                    color: Colors.blueGrey,
+                                    fontWeight: FontWeight.normal,
+                                  ),
+
+                                ),
+                                Icon(
+                                  Icons.pin_end_sharp,
+                                  size:40,
+                                  color: Colors.brown,
+
+                                ),
+                              ],
+                            ),
+                            decoration: BoxDecoration(
+                              color: Colors.orange[100],
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(12.0),
+                              ),
+                            ),
+                          ),
+
+
+
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: 30.00,
+                      width: double.infinity,
+                      margin: EdgeInsets.fromLTRB(40, 5, 3, 5),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children:<Widget> [
+                          Text (
+                            'Expenditure Breakdown',
+                            style: TextStyle(
+                              fontSize: 20.00,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                            ),
+
+                          ),
+                          Text (
+                            '+rs23,000',
+                            style: TextStyle(
+                              fontSize: 20.00,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                            ),
+
+                          ),
+
+
+
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: 50.00,
+                      margin: EdgeInsets.fromLTRB(40, 5, 3, 5),
+                      color: Colors.white,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+                        children:<Widget> [
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Text("This week"), // <-- Text
+                              Text("+2.3%"), // <-- Text
+                            ],
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Container(
+                                height: 40.00,
+                                margin: EdgeInsets.fromLTRB(20, 5, 20, 5),
+                                padding: EdgeInsets.all(5.00),
+                                color: Colors.white,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+                                  children:<Widget> [
+                                    Container(
+                                      height: 30,
+                                      width: 30,
+                                      margin: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                                      decoration: BoxDecoration(
+                                        color: Colors.lightBlueAccent[100],
+                                        borderRadius: BorderRadius.all(
+                                          Radius.circular(12.0),
+                                        ),
+                                      ),
+                                    ),
+                                    Container(
+                                      height: 30,
+                                      width: 30,
+                                      margin: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                                      decoration: BoxDecoration(
+                                        color: Colors.lightBlueAccent[100],
+                                        borderRadius: BorderRadius.all(
+                                          Radius.circular(12.0),
+                                        ),
+                                      ),
+                                    ),
+                                    Container(
+                                      height: 30,
+                                      width: 30,
+                                      margin: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                                      decoration: BoxDecoration(
+                                        color: Colors.lightBlueAccent[100],
+                                        borderRadius: BorderRadius.all(
+                                          Radius.circular(12.0),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+
+                            ],
+                          ),
+
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: 300.00,
+                      width: double.infinity,
+                      margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                      padding: EdgeInsets.all(5.00),
+                      color: Colors.white10,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+
+                        children:<Widget> [
+                          Container(
+                            height: 175,
+                            width: 50,
+                            margin: EdgeInsets.fromLTRB(5, 5, 5, 5),
+
+                            decoration: BoxDecoration(
+                              color: Colors.blueAccent[300],
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(12.0),
+                              ),
+                            ),
+                          ),//1
+                          Container(
+                            margin: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                            height: 150,
+                            width: 50,
+                            decoration: BoxDecoration(
+                              color: Colors.blueAccent[700],
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(12.0),
+                              ),
+                            ),
+                          ),//2
+                          Container(
+                            height: 250,
+                            width: 50,
+                            margin: EdgeInsets.fromLTRB(5, 5, 5, 5),
+
+                            decoration: BoxDecoration(
+                              color: Colors.blueAccent[100],
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(12.0),
+                              ),
+                            ),
+                          ),//3
+                          Container(
+                            margin: EdgeInsets.fromLTRB(5, 5, 5, 5),
+
+                            height: 120,
+                            width: 50,
+                            decoration: BoxDecoration(
+                              color: Colors.black12,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(12.0),
+                              ),
+                            ),
+                          ),//4
+                          Container(
+                            height: 200,
+                            width: 50,
+                            margin: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                            decoration: BoxDecoration(
+                              color: Colors.lightBlueAccent[100],
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(12.0),
+                              ),
+                            ),
+                          ),//5
+                          Container(
+                            height: 250,
+                            width: 50,
+                            margin: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                            decoration: BoxDecoration(
+                              color: Colors.black12,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(12.0),
+                              ),
+                            ),
+                          ),//6
+                          Container(
+                            height: 200,
+                            width: 50,
+                            margin: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                            decoration: BoxDecoration(
+                              color: Colors.black12,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(12.0),
+                              ),
+                            ),
+                          ),//7
+
+
+
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: 150.00,
+                      margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      padding: EdgeInsets.all(5.00),
+                      color: Colors.lightBlueAccent[100],
+                      child: Row(
+                        children:<Widget> [
+                          CircleAvatar(
+                            radius: 50.00,
+                            backgroundImage: NetworkImage('data:image/jpeg;base64,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'),
+                          ),
+                          Container(
+                            margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                            padding: EdgeInsets.all(5.00),
+                            height: 150.00,
+                            width: 300,
+                            child: Text (
+                                'Create quick saving goals with friends and colleages and and click below to save.',
+                                style: TextStyle(
+                                    fontSize: 25.00,
+                                    color: Colors.teal,
+                                    fontWeight: FontWeight.normal
+                                )
+
+                            ),
+                          ),
+
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: 50.00,
+                      margin: EdgeInsets.fromLTRB(20, 5, 20, 5),
+                      padding: EdgeInsets.all(5.00),
+                      color: Colors.white,
+                    ),
+
+
+
+
+
+
+
+
+
+                  ]
+              ),
+            )
+        ),
+      ),
+    );
+  }
+}
+class SecondRoute extends StatelessWidget {
+  const SecondRoute({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SafeArea(
+            child:   SingleChildScrollView(
+              child: Column(
+                  children:<Widget> [
+                    Container(
+                      height: 85.00,
+                      width: double.infinity,
+                      margin: EdgeInsets.fromLTRB(40, 5, 3, 5),
+                      child: Column(
+                        crossAxisAlignment:CrossAxisAlignment.start,
+                        children:<Widget> [
+                          Text (
+                            'Saving Plans',
+                            style: TextStyle(
+                              fontSize: 30.00,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                            ),
+
+                          ),
+                          Text (
+                            'Create new plans and save towards reaching their goals',
+                            style: TextStyle(
+                              fontSize: 20.00,
+                              color: Colors.black,
+                              fontWeight: FontWeight.normal,
+                            ),
+
+                          ),
+
+
+
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: 200.00,
+                      width: double.infinity,
+                      margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                      padding: EdgeInsets.all(5.00),
+                      color: Colors.white10,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+                        children:<Widget> [
+                          Container(
+                            height: 200,
+                            width: 200,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+
+                              children:<Widget> [
+                                Icon(
+                                  Icons.wallet,
+                                  size:40,
+                                  color: Colors.blue,
+
+                                ),
+                                Text (
+                                  'Tesla goals',
+                                  style: TextStyle(
+                                    fontSize: 30.00,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+
+                                ),
+                                Text ('+RS4000/12000',
+                                  style: TextStyle(
+                                    fontSize: 20.00,
+                                    color: Colors.grey,
+                                    fontWeight: FontWeight.normal,
+                                  ),
+
+                                ),
+                                Icon(
+                                  Icons.pin_end_sharp,
+                                  size:40,
+                                  color: Colors.blue,
+
+                                ),
+
+
+                              ],
+                            ),
+                            decoration: BoxDecoration(
+                              color: Colors.lightBlueAccent[100],
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(12.0),
+
+                              ),
+                            ),
+                          ),
+                          Container(
+                            height: 200,
+                            width: 200,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+
+                              children:<Widget> [
+                                Icon(
+                                  Icons.wallet,
+                                  size:40,
+                                  color: Colors.blue,
+
+                                ),
+                                Text (
+                                  'Macbook 20',
+                                  style: TextStyle(
+                                    fontSize: 30.00,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+
+                                ),
+                                Text ('+RS4000/12000',
+                                  style: TextStyle(
+                                    fontSize: 20.00,
+                                    color: Colors.grey,
+                                    fontWeight: FontWeight.normal,
+                                  ),
+
+                                ),
+                                Icon(
+                                  Icons.pin_end_sharp,
+                                  size:40,
+                                  color: Colors.blue,
+
+                                ),
+
+
+                              ],
+                            ),
+                            decoration: BoxDecoration(
+                              color: Colors.lightBlueAccent[100],
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(12.0),
+
+                              ),
+                            ),
+                          ),
+
+
+
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: 200.00,
+                      width: double.infinity,
+                      margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                      padding: EdgeInsets.all(5.00),
+                      color: Colors.white10,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+                        children:<Widget> [
+                          Container(
+                            height: 200,
+                            width: 200,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+
+                              children:<Widget> [
+                                Icon(
+                                  Icons.wallet,
+                                  size:40,
+                                  color: Colors.blue,
+
+                                ),
+                                Text (
+                                  'Maldives way',
+                                  style: TextStyle(
+                                    fontSize: 30.00,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+
+                                ),
+                                Text ('+RS4000/12000',
+                                  style: TextStyle(
+                                    fontSize: 20.00,
+                                    color: Colors.grey,
+                                    fontWeight: FontWeight.normal,
+                                  ),
+
+                                ),
+                                Icon(
+                                  Icons.pin_end_sharp,
+                                  size:40,
+                                  color: Colors.blue,
+
+                                ),
+
+
+                              ],
+                            ),
+                            decoration: BoxDecoration(
+                              color: Colors.lightBlueAccent[100],
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(12.0),
+
+                              ),
+                            ),
+                          ),
+                          Container(
+                            height: 200,
+                            width: 200,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+
+                              children:<Widget> [
+                                Icon(
+                                  Icons.wallet,
+                                  size:40,
+                                  color: Colors.blue,
+
+                                ),
+                                Text (
+                                  'Avoid sea finish for village',
+                                  style: TextStyle(
+                                    fontSize: 25.00,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+
+                                ),
+                                Text ('+RS 3000/12000',
+                                  style: TextStyle(
+                                    fontSize: 20.00,
+                                    color: Colors.grey,
+                                    fontWeight: FontWeight.normal,
+                                  ),
+
+                                ),
+                                Icon(
+                                  Icons.pin_end_sharp,
+                                  size:40,
+                                  color: Colors.blue,
+
+                                ),
+
+
+                              ],
+                            ),
+                            decoration: BoxDecoration(
+                              color: Colors.lightBlueAccent[100],
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(12.0),
+
+                              ),
+                            ),
+                          ),
+
+
+
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: 200.00,
+                      width: double.infinity,
+                      margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                      padding: EdgeInsets.all(5.00),
+                      color: Colors.white10,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+                        children:<Widget> [
+                          Container(
+                            height: 200,
+                            width: 200,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+
+                              children:<Widget> [
+                                Icon(
+                                  Icons.wallet,
+                                  size:40,
+                                  color: Colors.blue,
+
+                                ),
+                                Text (
+                                  'iphone X',
+                                  style: TextStyle(
+                                    fontSize: 30.00,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+
+                                ),
+                                Text ('+RS 5000/12000',
+                                  style: TextStyle(
+                                    fontSize: 20.00,
+                                    color: Colors.grey,
+                                    fontWeight: FontWeight.normal,
+                                  ),
+
+                                ),
+                                Icon(
+                                  Icons.pin_end_sharp,
+                                  size:40,
+                                  color: Colors.blue,
+
+                                ),
+
+
+                              ],
+                            ),
+                            decoration: BoxDecoration(
+                              color: Colors.lightBlueAccent[100],
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(12.0),
+
+                              ),
+                            ),
+                          ),
+                          Container(
+                            height: 200,
+                            width: 200,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+
+                              children:<Widget> [
+                                Icon(
+                                  Icons.wallet,
+                                  size:40,
+                                  color: Colors.blue,
+
+                                ),
+                                Text (
+                                  'Blah blah charges',
+                                  style: TextStyle(
+                                    fontSize: 30.00,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+
+                                ),
+                                Text ('+RS 320/12000',
+                                  style: TextStyle(
+                                    fontSize: 20.00,
+                                    color: Colors.grey,
+                                    fontWeight: FontWeight.normal,
+                                  ),
+
+                                ),
+                                Icon(
+                                  Icons.pin_end_sharp,
+                                  size:40,
+                                  color: Colors.blue,
+
+                                ),
+
+
+                              ],
+                            ),
+                            decoration: BoxDecoration(
+                              color: Colors.lightBlueAccent[100],
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(12.0),
+
+                              ),
+                            ),
+                          ),
+
+
+
+                        ],
+                      ),
+                    ),
+                  ]
+              ),
+            )
+        ),
+      ),
+    );
+  }
+}
+
